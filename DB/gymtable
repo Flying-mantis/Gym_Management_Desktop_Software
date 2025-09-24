@@ -1,0 +1,265 @@
+/*
+SQLyog Ultimate v8.82 
+MySQL - 5.1.50-community : Database - gym
+*********************************************************************
+*/
+
+/*!40101 SET NAMES utf8 */;
+
+/*!40101 SET SQL_MODE=''*/;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`gym` /*!40100 DEFAULT CHARACTER SET latin1 */;
+
+USE `gym`;
+
+/*Table structure for table `admindetail` */
+
+DROP TABLE IF EXISTS `admindetail`;
+
+CREATE TABLE `admindetail` (
+  `name` varchar(50) DEFAULT NULL,
+  `father` varchar(50) DEFAULT NULL,
+  `nationality` varchar(50) DEFAULT NULL,
+  `mobile` decimal(10,0) DEFAULT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `sex` varchar(50) DEFAULT NULL,
+  `merital` varchar(50) DEFAULT NULL,
+  `dob` varchar(50) DEFAULT NULL,
+  `address` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `admindetail` */
+
+insert  into `admindetail`(`name`,`father`,`nationality`,`mobile`,`email`,`sex`,`merital`,`dob`,`address`) values ('dfghj','fghjk','fghjk','234567','fghjk','Male','Single','564654','sdfghjk'),('fghjkl','fghjkl;','fghjk','3456789','fghjkl','Male','Single','34567','fghjkl'),('dfghjkl','fghjkl;','fghjkl','23456789','vghjkl','Male','Marrid','456789','dfghjk'),('Raghav','Manmohan dubey','indian','123456987','dfghjkl;lkjhgf237890fgh','Male','Single','2345678','sdfghi'),('Shivam','shrvan kumar dubey','indian','8765063147','shivamdubey3147@gmail.com','Male','Single','20/08/1997','lucknow(Khurram nagar)'),('shivam','shrvan kumar','indian','8765063147','shivamdubey3147@gmail.com','Male','Single','12/12/1998','lucknow');
+
+/*Table structure for table `adminpage` */
+
+DROP TABLE IF EXISTS `adminpage`;
+
+CREATE TABLE `adminpage` (
+  `admin_id` varchar(50) DEFAULT NULL,
+  `password` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `adminpage` */
+
+insert  into `adminpage`(`admin_id`,`password`) values ('admin','admin');
+
+/*Table structure for table `attendance` */
+
+DROP TABLE IF EXISTS `attendance`;
+
+CREATE TABLE `attendance` (
+  `mob` decimal(10,0) DEFAULT NULL,
+  `name` varchar(50) DEFAULT NULL,
+  `date` date DEFAULT NULL,
+  `status` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `attendance` */
+
+insert  into `attendance`(`mob`,`name`,`date`,`status`) values ('8765063147','Raghav','2018-08-30','present'),('8279592138','shivam dubey','2018-08-30','present'),('8765063147','Raghav','2018-09-01','absent'),('233123123','sdvsdv','2018-09-06','present');
+
+/*Table structure for table `attendlist` */
+
+DROP TABLE IF EXISTS `attendlist`;
+
+CREATE TABLE `attendlist` (
+  `name` varchar(50) DEFAULT NULL,
+  `father` varchar(50) DEFAULT NULL,
+  `mobile` decimal(10,0) DEFAULT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `address` varchar(50) DEFAULT NULL,
+  `submit` tinyint(1) DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `attendlist` */
+
+/*Table structure for table `dropgym` */
+
+DROP TABLE IF EXISTS `dropgym`;
+
+CREATE TABLE `dropgym` (
+  `name` varchar(50) DEFAULT NULL,
+  `father` varchar(50) DEFAULT NULL,
+  `mobile` decimal(10,0) DEFAULT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `bweight` varchar(50) DEFAULT NULL,
+  `aweight` varchar(50) DEFAULT NULL,
+  `bheight` varchar(50) DEFAULT NULL,
+  `aheight` varchar(50) DEFAULT NULL,
+  `weightcha` varchar(50) DEFAULT NULL,
+  `heightcha` varchar(50) DEFAULT NULL,
+  `dob` varchar(50) DEFAULT NULL,
+  `contract` varchar(50) DEFAULT NULL,
+  `sex` varchar(50) DEFAULT NULL,
+  `marital` varchar(50) DEFAULT NULL,
+  `address` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `dropgym` */
+
+insert  into `dropgym`(`name`,`father`,`mobile`,`email`,`bweight`,`aweight`,`bheight`,`aheight`,`weightcha`,`heightcha`,`dob`,`contract`,`sex`,`marital`,`address`) values ('sd','shd','78','s@123','41','50','4\"','45\"','4\"','54\"','12/20/1997','5months','Male','Single','lucknow'),(NULL,'fghj','1234567890','xfghujh@123gmail.com','5','54','520','5','hj','5','12547898','7 month','Male','Single','5454'),(NULL,'rank','123456786','ghjn@123gmail.com','5','55\'','52','56','12','5\'','12548798','7 month','Male','Single','sdftgyhjkl;xfcgvbhjk'),(NULL,'rank','123456786','ghjn@123gmail.com','5','455','52','54','45','12','12548798','7 month','Male','Single','sdftgyhjkl;xfcgvbhjk'),(NULL,'rank','123456786','ghjn@123gmail.com','5','454','52','4554','54','44','12548798','7 month','Male','Single','sdftgyhjkl;xfcgvbhjk'),(NULL,'rank','123456786','ghjn@123gmail.com','5','84','52','5','45','45','12548798','7 month','Male','Single','sdftgyhjkl;xfcgvbhjk'),(NULL,'shiv','1234567890','xfghujh@123gmail.com','5','847','520','54','7','4','12547898','7 month','Male','Single','5454'),(NULL,'rank','123456786','ghjn@123gmail.com','5','5','52','56','5','5','12548798','7 month','Male','Single','sdftgyhjkl;xfcgvbhjk'),('ank','rank','123456786','ghjn@123gmail.com','5','5','52','4','4','5','12548798','7 month','Male','Single','sdftgyhjkl;xfcgvbhjk'),('shiv','fghj','1234567890','xfghujh@123gmail.com','5','45','520','45','45','45','12547898','7 month','Male','Single','5454'),('shivam dubey','Mr Shrvan kumar dubey','8279592138','shivamdubey3147@gmail.com','5\'7\"','6\'','50 kg','55 kg','3\"','5 kg','20/08/1997','10 month','Male','Single','lucknow'),('shiv','fghj','1234567890','xfghujh@123gmail.com','5','7','520','560','70','9','12547898','7 month','Male','Single','5454');
+
+/*Table structure for table `empreg` */
+
+DROP TABLE IF EXISTS `empreg`;
+
+CREATE TABLE `empreg` (
+  `name` varchar(50) DEFAULT NULL,
+  `father` varchar(50) DEFAULT NULL,
+  `nationality` varchar(50) DEFAULT NULL,
+  `mobile` decimal(10,0) DEFAULT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `sex` varchar(50) DEFAULT NULL,
+  `marital` varchar(50) DEFAULT NULL,
+  `dob` varchar(15) DEFAULT NULL,
+  `regdate` varchar(15) DEFAULT NULL,
+  `address` varchar(50) DEFAULT NULL,
+  `post` varchar(20) DEFAULT NULL,
+  `salary` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `empreg` */
+
+insert  into `empreg`(`name`,`father`,`nationality`,`mobile`,`email`,`sex`,`marital`,`dob`,`regdate`,`address`,`post`,`salary`) values ('shivam','shrvan kumar','indian','8279592138','shivamdubey3147@gmail.com','male','single','1997-08-20',NULL,'lucknow',NULL,NULL),('inshal','wkldn','ldkn','79289','nkjnlkjnkjn',NULL,NULL,'7700-22-22',NULL,'1111-11-11','dskvnlkv','123'),('ghjk','yuio','oijhv','3456789','dfghj',NULL,NULL,'12/12/12','12/12/18','ghjuikl','5678','5678'),('ghjkl;','fghjkl;','fghjkl','3456789','fghjk','Male','Single','12/12/12','10/10/10','fghjkl','67890','67890'),('sdfgh','asdfg','sdfghj','23456','sdfgh','Male','Single','345667','234545','sdfgh','23456','23456'),('shivam','shrvan kumar','indian','8279592138','shivamdubey3147@gmail.com','Male','Single','20/08/1997','10/12/2018','khurram nagar','95000','95000'),('a','s','d','77','hh','Male','Single','56789','45678','yuiop','4567','4567'),('bnm','tyhjk','ghjk','34567','fghjk','Male','Marrid','4567','3456','fghjk','','567'),('njn nj','kinj','k k','5455','zxsxx','Male','Marrid','44','55','nn','','1111'),('vineet','sheelesh','indian','1023654789','vineet234@gmail.com','Male','Single','12.12/3453','13/11/9876','fghj','32134','32134'),('Raghav dubey','Jagmaohan dubey','Indian ','792258654','raghavdubey43@gmail.com','Male','Single','12/10/18','10/18/12','fghjkl','','55202'),('ankit','Gauri Shankar','Indian','7896541230','sdfyfg@gmail.com1234','Male','Single','12/12/1996','12/10/2018','Alighrah','','55500'),('dfgh','dfghjhgf','rty','741785296','zxcvbnhgfdfgh','Male','Marrid','23456','567','werfghytfgbn','','4567'),('dfghjk','dfgh','ertg','345','asxcvbn','Female','Single','2345','2345','werewsdfgfdewer    rftyuu ertyu vwretryfg ','','345678'),('fhgjkvfd','hgjv','TUGKJB','45678','FGHJO','Male','Single','4578697','34567','FGHJKUYG','','45678'),('inshaal','skjnck','knkjk','98798798','uhkhj','Male','Single','76576576','576567','mbjbjhkj','','232'),('juhu','sdnkj','ksjdnk','88798','bmnbmn','Male','Single','6876','78687','kjkjkkjkj','','5'),('sdf','asdf','sd','123456','sdfghh234','Male','Single','123456','12345','sbn','store manager','123456'),('ghj','asw','indian','123457','sdcfvgbn mi876543','Male','Single','12345','123456','sxdeyh','tariner','67876'),('shivam','shravan kumar','indian','8765063147','shivamdubey3147@gmail.com','Male','Single','20/08/1997','24/08/2018','lucknow','manager','99000'),('ghjk','fghjk','fghj','3456789','456789iughio','Male','Single','456789','34567',';lkjhg','tariner','34567'),('vimal','kamal','indian','7896541230','vimal123@gmail.com','Male','Single','12/12/1995','12/12/2017','lucknow','sweeper','12000'),('pankaj','sharvesh','indian','12036523','pankaj123@gmail.com','Male','Single','12/12/1997','10/12/2017','mainpuri','store manager','5500'),('radhey','nand kishor','indian','7896541258','radhey123@gmail.com','Male','Single','12/10/2000','14/10/2017','mainpuri','tariner','5500'),('dfg','sd','df','2345678','sdfgh234567','Male','Single','2345678','46','lko','store manager','22000'),('shivam dubey','Mr shrvan kumar dubey','Indian','8279592138','shivamdubey968@gmail.com','Male','Single','20/08/1997','12/07/2018','lucknow','tariner','55200'),('amit','baijnaath','indian','9874563210','amit@gmail.com','Male','Single','12/04/1999','12/08/2018','lucknow','tariner','5550'),('ghkjl','ghjk','','23456789','5678','','','','','','select',''),('shivam','fghjk','ghj','3456789','tyujik','Male','Single','212121','212121','fghjk','store manager','454554'),('inshaal','javed','indian','789797','hdbcjhdsbc','Male','Single','12-12-1212','12-12-1212','dcjdsnckdsnckdnc','tariner','10000');
+
+/*Table structure for table `invoice_detail` */
+
+DROP TABLE IF EXISTS `invoice_detail`;
+
+CREATE TABLE `invoice_detail` (
+  `date` varchar(50) DEFAULT NULL,
+  `cus_name` varchar(50) DEFAULT NULL,
+  `cus_mob` decimal(50,0) DEFAULT NULL,
+  `medicine_name` varchar(50) DEFAULT NULL,
+  `medicine_price` varchar(50) DEFAULT NULL,
+  `exp_date` varchar(50) DEFAULT NULL,
+  `mft_date` varchar(50) DEFAULT NULL,
+  `quantity` decimal(50,0) DEFAULT NULL,
+  `invc_no` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `invoice_detail` */
+
+insert  into `invoice_detail`(`date`,`cus_name`,`cus_mob`,`medicine_name`,`medicine_price`,`exp_date`,`mft_date`,`quantity`,`invc_no`) values ('2018-08-27','gfdrtfgyhj','798465','ProteenX','450','03:06:2018','01:03:2019','9',NULL),('2018-08-27','gfdrtfgyhj','798465','ProteenX','450','03:06:2018','01:03:2019','9',NULL),('2018-08-27','vghj','3467','dfgh','4567','02:06:2021','02:02:2018','1',NULL),('2018-08-27','vbnjk','54545454','dfgh','4567','02:06:2021','02:02:2018','1',NULL),('2018-08-27','ghj','654565','dfgh','4567','02:06:2021','02:02:2018','1',NULL),('2018-08-27','hjkl','65454654','ON','550','2012-08-20','2012-08-20','1',NULL),('2018-08-27','cvb','6556','proteen powder','1235','06:04:2029','02:04:2016','1',NULL),('2018-08-27','wdr','65654','powder','550','02:03:2020','03:03:2018','1',NULL),('2018-08-27','inshaal','678687687','ProteenX','450','03:06:2018','01:03:2019','7',NULL),('2018-08-27','j','8','ProteenX','45','03:06:2018','01:03:2019','5',NULL),('2018-08-27','fgh','456','dfghjk','345','05:03:2030','01:01:2015','1',NULL),('2018-08-27','hgh','79','jg','20','02:02:2025','02:03:2017','1','0'),('2018-08-27','hhg','77687','proteen powder','1235','06:04:2029','02:04:2016','1','0'),('2018-08-27','vghjkl','45678','proteen powder','1235','06:04:2029','02:04:2016','1','0'),('2018-08-27','fghjk','67667','ProteenX','450','03:06:2018','01:03:2019','4','0'),('2018-08-27','hjhj','78788','proteen powder','1235','06:04:2029','02:04:2016','1','0'),('2018-08-27','hgjk','5445','powder','550','02:03:2020','03:03:2018','1','0'),('2018-08-27','fghjk','6556865','powder','550','03:03:2018','02:03:2020','1','0'),('2018-08-27','jk','45547','powder','550','03:03:2018','02:03:2020','1','0'),('2018-08-27','jk','45547','powder','550','03:03:2018','02:03:2020','1','0'),('2018-08-27','nmnm','5454','proteen powder','1235','02:04:2016','06:04:2029','1','0'),('2018-08-27','hhuh','89898989','powder','550','03:03:2018','02:03:2020','1','0'),('2018-08-27','fg','988989','powder','550','03:03:2018','02:03:2020','1','0'),('2018-08-27','hb','7788667','proteen powder','1235','02:04:2016','06:04:2029','1','1'),('2018-08-27','ghhj','787889','proteen powder','1235','02:04:2016','06:04:2029','1','2'),('2018-08-27','dsdfghjkl','74185','proteen powder','1235','02:04:2016','06:04:2029','1','3'),('2018-08-27','asdfghj','756385285','proteen powder','1235','02:04:2016','06:04:2029','1','4'),('2018-09-06','jhjgf','6776','combi','30','01:01:2014','06:04:2018','3','5');
+
+/*Table structure for table `medicinepur` */
+
+DROP TABLE IF EXISTS `medicinepur`;
+
+CREATE TABLE `medicinepur` (
+  `medicine_name` varchar(50) DEFAULT NULL,
+  `medicine_price` decimal(50,0) DEFAULT NULL,
+  `cell_no` varchar(50) DEFAULT NULL,
+  `quantity` varchar(50) DEFAULT NULL,
+  `exp_date` varchar(50) DEFAULT NULL,
+  `mft_date` varchar(50) DEFAULT NULL,
+  `r_lev` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `medicinepur` */
+
+insert  into `medicinepur`(`medicine_name`,`medicine_price`,`cell_no`,`quantity`,`exp_date`,`mft_date`,`r_lev`) values ('ON','550',NULL,'9','2012-08-20','2012-08-20','3'),('fghj','456','4','a1','02:01:2020','05:05:2023','2'),('dfghjk','345','a1','14','01:01:2015','05:03:2030','5'),('dfgh','4567','a2','195','02:02:2018','02:06:2021','2'),('ProteenX','450','B4','45','01:03:2019','03:06:2018','10'),('jg','20','a1','13','02:03:2017','02:02:2025','10'),('proteen powder','1235','C32','1','02:04:2016','06:04:2029','5'),('powder','550','a12','113','03:03:2018','02:03:2020','12'),('combi','30','n1','24','01:01:2014','06:04:2018','44');
+
+/*Table structure for table `medicinesale` */
+
+DROP TABLE IF EXISTS `medicinesale`;
+
+CREATE TABLE `medicinesale` (
+  `cell_no` varchar(50) DEFAULT NULL,
+  `medicine_name` varchar(50) DEFAULT NULL,
+  `medicine_price` decimal(10,0) DEFAULT NULL,
+  `quantity` decimal(10,0) DEFAULT NULL,
+  `exp_date` varchar(20) DEFAULT NULL,
+  `mft_date` varchar(20) DEFAULT NULL,
+  `cus_name` varchar(50) DEFAULT NULL,
+  `cus_mob` decimal(10,0) DEFAULT NULL,
+  `date` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `medicinesale` */
+
+insert  into `medicinesale`(`cell_no`,`medicine_name`,`medicine_price`,`quantity`,`exp_date`,`mft_date`,`cus_name`,`cus_mob`,`date`) values (NULL,'ProteenX','450','9','03:06:2018','01:03:2019','gfdrtfgyhj','798465','2018-08-27'),(NULL,'ProteenX','450','9','03:06:2018','01:03:2019','gfdrtfgyhj','798465','2018-08-27'),('a1','dfgh','4567','1','02:06:2021','02:02:2018','vghj','3467','2018-08-27'),('a1','dfgh','4567','1','02:06:2021','02:02:2018','vbnjk','54545454','2018-08-27'),('12','dfgh','4567','1','02:06:2021','02:02:2018','ghj','654565','2018-08-27'),('12','ON','550','1','2012-08-20','2012-08-20','hjkl','65454654','2018-08-27'),('a1','proteen powder','1235','1','06:04:2029','02:04:2016','cvb','6556','2018-08-27'),('a32','powder','550','1','02:03:2020','03:03:2018','wdr','65654','2018-08-27'),('a1','ProteenX','450','7','03:06:2018','01:03:2019','inshaal','678687687','2018-08-27'),('t','ProteenX','45','5','03:06:2018','01:03:2019','j','8','2018-08-27'),('a2','dfghjk','345','1','05:03:2030','01:01:2015','fgh','456','2018-08-27'),('s2','jg','20','1','02:02:2025','02:03:2017','hgh','79','2018-08-27'),('a2','proteen powder','1235','1','06:04:2029','02:04:2016','hhg','77687','2018-08-27'),('a1','proteen powder','1235','1','06:04:2029','02:04:2016','vghjkl','45678','2018-08-27'),('a2','ProteenX','450','4','03:06:2018','01:03:2019','fghjk','67667','2018-08-27'),('a2','proteen powder','1235','1','06:04:2029','02:04:2016','hjhj','78788','2018-08-27'),('a2','powder','550','1','02:03:2020','03:03:2018','hgjk','5445','2018-08-27'),('a12','powder','550','1','03:03:2018','02:03:2020','fghjk','6556865','2018-08-27'),('C32','proteen powder','1235','1','02:04:2016','06:04:2029','nmnm','5454','2018-08-27'),('a12','powder','550','1','03:03:2018','02:03:2020','hhuh','89898989','2018-08-27'),('a12','powder','550','1','03:03:2018','02:03:2020','fg','988989','2018-08-27'),('C32','proteen powder','1235','1','02:04:2016','06:04:2029','hb','7788667','2018-08-27'),('C32','proteen powder','1235','1','02:04:2016','06:04:2029','ghhj','787889','2018-08-27'),('C32','proteen powder','1235','1','02:04:2016','06:04:2029','dsdfghjkl','74185','2018-08-27'),('C32','proteen powder','1235','1','02:04:2016','06:04:2029','asdfghj','756385285','2018-08-27'),('n1','combi','30','3','01:01:2014','06:04:2018','jhjgf','6776','2018-09-06');
+
+/*Table structure for table `persondetail` */
+
+DROP TABLE IF EXISTS `persondetail`;
+
+CREATE TABLE `persondetail` (
+  `name` varchar(50) DEFAULT NULL,
+  `father` varchar(50) DEFAULT NULL,
+  `nationality` varchar(50) DEFAULT NULL,
+  `mobile` decimal(10,0) DEFAULT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `sex` varchar(50) DEFAULT NULL,
+  `merital` varchar(50) DEFAULT NULL,
+  `dob` varchar(50) DEFAULT NULL,
+  `chargesfee` varchar(50) DEFAULT NULL,
+  `height` varchar(50) DEFAULT NULL,
+  `weight` varchar(50) DEFAULT NULL,
+  `id_mark` varchar(50) DEFAULT NULL,
+  `address` varchar(50) DEFAULT NULL,
+  `contract` varchar(50) DEFAULT NULL,
+  `status` tinyint(1) DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `persondetail` */
+
+insert  into `persondetail`(`name`,`father`,`nationality`,`mobile`,`email`,`sex`,`merital`,`dob`,`chargesfee`,`height`,`weight`,`id_mark`,`address`,`contract`,`status`) values ('ghjk','ghjk','ghjk','4567','ghjkl','Male','Marrid','567867','55678','6','56','vghjk','4567','4567',1),('tghyj','ghjkl','ghjkl','34567','ghjk','Male','Single','56745','4567','8','90','ghjkl','34567','34567',0),('shiv','fghj','in','1234567890','xfghujh@123gmail.com','Male','Single','12547898','2154','5','520','dfghjkkjhbfghjkl;bjkl;','5454','7 month',0),('ank','rank','ink','123456786','ghjn@123gmail.com','Male','Single','12548798','21547889','5','52','xdfghjklkjhgfdfghjk','sdftgyhjkl;xfcgvbhjk','7 month',0),('fgh','fghj','dfg','456789','cvgbhnj5678','Male','Single','21548798','2132654','5','201','dfghjk','fghjnjkml','7 month',1),('fg','fgh','fg','45678','fghj34567','Male','Single','23456789','21578/98','5','520','sdftgyhjkolkmjn','cfgvyhujijhbhjnkl','10 month',0),('cvb','fghj','fghj','234567','fghjk34567fghj','Male','Single','2345','12345','4','5','fghjkjhg','vghjhb','7 month',0),('fg','fgh','indua','234567','dfgh4567fg','Male','Single','2102154','2103221','5','520','sdfghj','fghj','7 month',0),('dfrt','ert1','ghjn','234567','erty','Male','Single','414141','525','5','5201','sxdcfvgbhnjk','dfgbhnjmkl','7 month',0),('fgh','dfghj','dfg','23456789','dfghj345','Male','Single','12345','2345','4','234','DFGYHG','3456RTYUYTYU','10 month',1),('ajay','vijay','indian','589658745','ajay12@gmail.com','Male','Single','12/10/2000','1200','5\'','85','black mole on chest','pant nagar khurram nagar lucknow','5 month',0),('Raghav','Manmohan','pakistani','120000210','pakistaniaatankwadi#gmail.com','Male','Single','12/02/1997','1200','5\'','120','kala dhabhaa on sareer','irrak','10 month',0),('Rghav','manmohan','afreekan','1230456325','pakistani@420 gmail.com','Male','Single','12/02/2019','120000','99\'','500 kg','kala dhabha on bada sareer','pakistan ka kona','5 month',0),('raghav','manmohan','pakistan','454545454','manu@gmail.com','Male','Single','12/12/2012','54654','5\'','201','kala dhabha','lko','2 month',0),('Raghav','Manmohan','Indian','8765063147','raghav123@gmail.com','Male','Single','12/12/1201','12245','56\'','5421','kala dhabha','lucknow in pakistan','10 month',0),('sd','ds','ino','2132655478','ds@123','Male','Single','12/12/.2017','215478','5','45','kalapan','lko','5 month',0),('Bhatele','Mr RAjkumar','Indian','8596320147','bhatele123@gmail.com','Male','Single','12/12/1995','1200 rs','5\'12\"','656 kg','Black mole on chin','Jaswantnagar (Mainpuri)','10 month',0),('shivam dubey','Mr Shrvan kumar dubey','Indian','8279592138','shivamdubey3147@gmail.com','Male','Single','20/08/1997','2100 rs','5\'7\"','50 kg','white spot on shoulder','lucknow','10 month',0),('vivek','dffgjk','fghl','345678','dfghj45678','Male','Single','45678','55','58','gjl','dfghjkl;\'','fghjkl;','10 month',0),('ankit','sharma','indian','909','','','','','','','','','','select',0),('ksjv','kjkjn','jnn','878','jkjnk','Male','Single','12-12-1212','2000','12','60','sdc','vfvvsdcsd','5 month',0);
+
+/*Table structure for table `persontiming` */
+
+DROP TABLE IF EXISTS `persontiming`;
+
+CREATE TABLE `persontiming` (
+  `name` varchar(50) DEFAULT NULL,
+  `father` varchar(50) DEFAULT NULL,
+  `mobile` varchar(50) DEFAULT NULL,
+  `batchtiming` varchar(50) DEFAULT NULL,
+  `batchno` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `persontiming` */
+
+insert  into `persontiming`(`name`,`father`,`mobile`,`batchtiming`,`batchno`) values ('gyhujk','tyuio','456789','12:12','11'),('ghjk','ghjk','456789','55','1'),('','','','',''),('','','','',''),('','','','',''),('','','','',''),('ajay','vijay','indian','12:20','12'),('sd','ds','2132655478','12:12','21'),('Bhatele','Mr RAjkumar','8596320147','12:40','12'),('shivam dubey','Mr Shrvan kumar dubey','8279592138','12:30','12'),('ksjv','kjkjn','878','12','3');
+
+/*Table structure for table `pureqp` */
+
+DROP TABLE IF EXISTS `pureqp`;
+
+CREATE TABLE `pureqp` (
+  `eqp_name` varchar(50) DEFAULT NULL,
+  `eqp_cost` varchar(50) DEFAULT NULL,
+  `model_no` varchar(50) DEFAULT NULL,
+  `quantity` varchar(50) DEFAULT NULL,
+  `discription` varchar(50) DEFAULT NULL,
+  `status` tinyint(1) DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `pureqp` */
+
+insert  into `pureqp`(`eqp_name`,`eqp_cost`,`model_no`,`quantity`,`discription`,`status`) values ('dumbel','520','a23','12','mat karo ',0),('dumbel','520','A23','12','mat karo',0),('byshapes','120','B1','13','wah',0),('','','','','',0),('','','','','',0),('','','','','',0),('layered pushup sheet','450','C1','120','try to rest',0),('','','','','',0),('By shape dumbal','4526','VB34','12','Shapes are changed in to the previous version ',0),('','','','','',0),('','','','','',0),('dumbel','230','s43','12','mat karo nuksaan hoga',0),('pushup back','120','A1','120','mazedar',0),('cycle','12580','a342','12','maza aata hai',0),('back shoulder pushup','4521','a32S','12','very good',0),('butterfly','12000','123','2','dcmdcdbjkwd',0);
+
+/*Table structure for table `userpage` */
+
+DROP TABLE IF EXISTS `userpage`;
+
+CREATE TABLE `userpage` (
+  `user_id` varchar(50) DEFAULT NULL,
+  `password` varchar(50) DEFAULT NULL,
+  `confirm_password` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `userpage` */
+
+insert  into `userpage`(`user_id`,`password`,`confirm_password`) values ('shivam','2121',NULL),('amit','123','123'),('ghkjl','124','124'),('shivam','1111','1111'),('inshaal','8962','8962');
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
